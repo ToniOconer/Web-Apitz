@@ -1,0 +1,237 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0e0e0e;
+  color: white;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #1a1a1a;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  animation: slideDown 1s ease-out;
+}
+
+header img {
+  height: 60px;
+}
+
+header h1 {
+  font-size: 1.8em;
+  margin: 0;
+}
+
+.description {
+  text-align: center;
+  padding: 60px 20px;
+  animation: fadeIn 2s ease-in;
+}
+
+.description h2 {
+  font-size: 2em;
+  color: #00ff99;
+}
+
+.description p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #cccccc;
+}
+
+.owner-info {
+  background-color: #1a1a1a;
+  padding: 30px;
+  text-align: center;
+  color: #aaa;
+  animation: fadeIn 3s;
+}
+
+.owner-info p {
+  margin: 10px 0;
+}
+
+.wa-link {
+  color: #00ff99;
+  text-decoration: none;
+}
+
+.wa-link:hover {
+  text-decoration: underline;
+}
+
+.product-section {
+  padding: 40px 20px;
+  background-color: #121212;
+  animation: fadeIn 2s;
+}
+
+.product-section h2 {
+  text-align: center;
+  color: #00ff99;
+  margin-bottom: 30px;
+}
+
+.product {
+  background-color: #1e1e1e;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 153, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.3);
+}
+
+.product h3 {
+  margin-top: 0;
+  color: #00ffcc;
+}
+
+.product p,
+.product ul {
+  color: #ccc;
+  font-size: 1em;
+}
+
+.product ul {
+  padding-left: 20px;
+}
+
+.wa-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #00ff99;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.wa-button:hover {
+  background-color: #00cc7a;
+}
+
+.spec {
+  text-align: center;
+  margin-top: 30px;
+  color: #999;
+  font-style: italic;
+}
+
+.payment-method {
+  background-color: #1a1a1a;
+  padding: 30px;
+  text-align: center;
+  color: #eee;
+  animation: fadeIn 2s;
+}
+
+.payment-method h2 {
+  color: #00ff99;
+  margin-bottom: 10px;
+}
+
+.payment-method p {
+  font-size: 1.1em;
+  color: #ccc;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: #555;
+  font-size: 0.9em;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #0e0e0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 9999;
+  transition: opacity 1s ease;
+}
+
+#preloader.hide-preloader {
+  opacity: 0;
+}
+
+.loader-content {
+  text-align: center;
+  animation: zoomFade 1.5s ease forwards;
+}
+
+.loader-content img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.loader-content h1 {
+  margin-top: 20px;
+  font-size: 1.8em;
+  color: #00ff99;
+  opacity: 0;
+  animation: fadeInText 1.5s forwards 0.5s;
+}
+
+@keyframes zoomFade {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
